@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #060913;
+    color: #e2e8f0;
+    user-select: none;
+    -webkit-user-select: none;
+    overflow: hidden;
+  }
+}
+
+/* Custom scrollbars and sci-fi aesthetic utilities */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090e1d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e2d4f;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00e5ff;
+}
+
+/* Sci-fi HUD glow text utilities */
+.text-glow-blue {
+  text-shadow: 0 0 8px rgba(0, 229, 255, 0.6);
+}
+
+.text-glow-purple {
+  text-shadow: 0 0 8px rgba(157, 78, 221, 0.6);
+}
+
+.text-glow-green {
+  text-shadow: 0 0 8px rgba(0, 255, 136, 0.6);
+}
+
+.text-glow-red {
+  text-shadow: 0 0 8px rgba(255, 0, 85, 0.6);
+}
+
+.text-glow-yellow {
+  text-shadow: 0 0 8px rgba(255, 214, 10, 0.6);
+}
+
+/* Hologram grid overlay */
+.holo-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 229, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 229, 255, 0.05) 1px, transparent 1px);
+}

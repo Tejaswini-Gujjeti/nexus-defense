@@ -1,0 +1,108 @@
+import { EnemyConfig, EnemyType } from '../../types/game';
+
+export const ENEMY_CONFIGS: Record<EnemyType, EnemyConfig> = {
+  SCOUT: {
+    type: 'SCOUT',
+    name: 'Viper Scout',
+    role: 'Fast Reconnaissance',
+    description: 'Ultra-light agile drone designed to probe defenses and slip past slow artillery.',
+    threatLevel: 'MODERATE',
+    weakness: 'Pulse Cannons and Tesla Arcs',
+    color: 0xef4444,
+    colorHex: '#ef4444',
+    stats: {
+      maxHp: 75,
+      maxShield: 0,
+      shieldRegenRate: 0,
+      speed: 140, // px per sec
+      armor: 0.05,
+      reward: 10,
+      energyReward: 5,
+      coreDamage: 1,
+    },
+  },
+
+  GRUNT: {
+    type: 'GRUNT',
+    name: 'Cyber Grunt',
+    role: 'Standard Combatant',
+    description: 'Mass-produced cybernetic infantry chassis with balanced armor and steady advancement.',
+    threatLevel: 'HIGH',
+    weakness: 'Continuous Laser Towers and Concentrated Fire',
+    color: 0x3b82f6,
+    colorHex: '#3b82f6',
+    stats: {
+      maxHp: 210,
+      maxShield: 40,
+      shieldRegenRate: 8,
+      speed: 85,
+      armor: 0.2,
+      reward: 18,
+      energyReward: 10,
+      coreDamage: 2,
+    },
+  },
+
+  TANK: {
+    type: 'TANK',
+    name: 'Ironclad Juggernaut',
+    role: 'Heavy Armored Siege',
+    description: 'Quad-track heavy dreadnought with dense composite plating that shrugs off light fire.',
+    threatLevel: 'CRITICAL',
+    weakness: 'Mag-Rail Cannons and Armor-Shredding Artillery',
+    color: 0x94a3b8,
+    colorHex: '#94a3b8',
+    stats: {
+      maxHp: 650,
+      maxShield: 100,
+      shieldRegenRate: 15,
+      speed: 48,
+      armor: 0.5, // 50% damage reduction
+      reward: 45,
+      energyReward: 22,
+      coreDamage: 5,
+    },
+  },
+
+  SWARM: {
+    type: 'SWARM',
+    name: 'Nanite Swarm Host',
+    role: 'High-Density Cluster',
+    description: 'Organic-synthetic micro-drones traveling in packed formations; overwhelming if not countered by AOE.',
+    threatLevel: 'HIGH',
+    weakness: 'Cryo Slow and Artillery Splash Explosions',
+    color: 0x10b981,
+    colorHex: '#10b981',
+    stats: {
+      maxHp: 110,
+      maxShield: 0,
+      shieldRegenRate: 0,
+      speed: 105,
+      armor: 0.0,
+      reward: 8,
+      energyReward: 4,
+      coreDamage: 1,
+    },
+  },
+
+  BOSS: {
+    type: 'BOSS',
+    name: 'Omega Dreadnought Titan',
+    role: 'Capital Class Warship',
+    description: 'Colossal biomechanical dreadnought with multi-layered plasma shields, heavy armor, and devastating core breach payload.',
+    threatLevel: 'EXTREME',
+    weakness: 'Full Grid Focus Fire, Grid Overdrive & Tactical Strikes',
+    color: 0xa855f7,
+    colorHex: '#a855f7',
+    stats: {
+      maxHp: 4200,
+      maxShield: 1800,
+      shieldRegenRate: 50,
+      speed: 32,
+      armor: 0.55,
+      reward: 350,
+      energyReward: 120,
+      coreDamage: 25,
+    },
+  },
+};
